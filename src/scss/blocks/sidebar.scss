@@ -1,0 +1,129 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-top: 20px;
+
+    &-active {
+        right: 0; // показуємо меню
+    }
+
+    &__nav {
+        padding: 0 20px;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        .has-children {
+            position: relative;
+        }
+
+        li {
+            display: block;
+            width: 100%;
+        }
+
+    }
+
+    &__link {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 20px;
+    }
+
+    &__link:hover {
+        color: rgb(162, 192, 190);
+    }
+
+    .collaplse {
+        padding: 0;
+        margin: 0;
+
+        li>.sidebar__link {
+            padding-left: 40px;
+            font-size: 16px;
+        }
+
+
+    }
+
+    .collaplse>li>.collaplse>li {
+        .sidebar__link {
+            padding-left: 60px;
+        }
+    }
+
+    .arrow-collapse {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        z-index: 20;
+        width: 36px;
+        height: 36px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .arrow-collapse::before {
+        content: '\f106';
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 12px;
+        z-index: 20;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-180deg);
+        transition: .3s all ease;
+
+    }
+
+    .arrow-collapse:hover {
+        background: #f8f9fa;
+    }
+
+
+    .cross {
+        text-align: right;
+        padding: 0 20px;
+    }
+
+    .cross>span::after {
+        content: '\f00d';
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 900;
+
+    &-active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

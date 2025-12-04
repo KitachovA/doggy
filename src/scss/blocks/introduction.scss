@@ -1,0 +1,60 @@
+.introduction {
+    height: calc(100vh);
+    min-height: 600px;
+    background-color: #f8f9fa;
+
+    &__wrapper {
+        display: flex;
+        height: 100vh;
+        min-height: 600px;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+    }
+
+    &__text {
+        align-self: center;
+        padding: 0 20px;
+        width: 60%;
+
+        &-wrapper {
+            span {
+                display: block;
+            }
+        }
+
+        div {
+            color: #999999;
+            font-size: 19px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+    }
+
+    &__img {
+        align-self: end;
+        width: 40%;
+
+    }
+
+    &__item {
+        width: 100%;
+
+
+        &-img {
+            min-height: 657px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .introduction {
+        &__item {
+            &-img {
+                min-height: auto;
+            }
+
+        }
+    }
+}

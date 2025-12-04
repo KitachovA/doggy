@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doggy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="cross"><span></span></div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__list">
+                <li><a class="sidebar__link" href="#">Home</a></li>
+                <li class="has-children">
+                    <span class="arrow-collapse"></span>
+                    <a class="sidebar__link" href="#">About</a>
+                    <ul class="collaplse">
+                        <li><a class="sidebar__link" href="#">Trainers</a></li>
+                        <li><a class="sidebar__link" href="#">Pricing</a></li>
+                        <li><a class="sidebar__link" href="#">FAQ</a></li>
+                        <li><a class="sidebar__link" href="#">Testimonials</a></li>
+                        <li><a class="sidebar__link" href="#">Gallery</a></li>
+                        <li><a class="sidebar__link" href="#">Blog</a></li>
+                        <li class="has-children">
+                            <span class="arrow-collapse"></span>
+                            <a class="sidebar__link" href="#">More Links</a>
+                            <ul class="collaplse">
+                                <li><a class="sidebar__link" href="#">More One</a></li>
+                                <li><a class="sidebar__link" href="#">More Two</a></li>
+                                <li><a class="sidebar__link" href="#">More Two</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="sidebar__link" href="#">Trainers</a></li>
+                <li><a class="sidebar__link" href="#">Services</a></li>
+                <li><a class="sidebar__link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="sticky-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <a href="#" class="sitename">Dogger<span>.</span></a>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li><a href="#" class="header__link">Home</a></li>
+                            <li class="has-children">
+                                <a href="#" class="header__link">
+                                    About
+                                </a>
+                                <ul class="dropdown">
+                                    <li><a href="#" class="header__link">Trainers</a></li>
+                                    <li><a href="#" class="header__link">Pricing</a></li>
+                                    <li><a href="#" class="header__link">FAQ</a></li>
+                                    <li><a href="#" class="header__link">Testimonials</a></li>
+                                    <li><a href="#" class="header__link">Gallery</a></li>
+                                    <li><a href="#" class="header__link">Blog</a></li>
+                                    <li class="has-children">
+                                        <a href="#" class="header__link">More Links</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#" class="header__link">More One</a></li>
+                                            <li><a href="#" class="header__link">More Two</a></li>
+                                            <li><a href="#" class="header__link">More Three</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="header__link">Trainers</a></li>
+                            <li><a href="#" class="header__link">Services</a></li>
+                            <li><a href="#" class="header__link">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <section class="introduction">
+        <div class="container">
+            <div class="introduction__wrapper">
+                <div class="introduction__text">
+                    <div class="introduction__text-wrapper">
+                        <h1 class="title">
+                            We Care For
+                            <span>Your Dog</span>
+                        </h1>
+                        <div>We always try to provide your dog the best
+                            services.</div>
+                    </div>
+                </div>
+                <div class="introduction__img">
+                    <div class="introduction__item">
+                        <img class="introduction__item-img" src="src/img/header/dogger_img_1.png.webp" alt="smile dog">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
