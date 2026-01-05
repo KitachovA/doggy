@@ -24,9 +24,10 @@ export default function animate() {
     ];
 
     let scrolling = false;
-    let lastScrollY = window.scrollY || 0;
+    let lastScrollY;
     let isInitialLoad = true;
     const scrollThreshold = 2;
+
 
     function checkElement(elements, directionDown) {
         elements.forEach(element => {
@@ -46,22 +47,26 @@ export default function animate() {
         });
     }
 
-    function handleScroll() {
+
+    function animationOnScroll() {
         const currentY = window.scrollY || 0;
         const delta = currentY - lastScrollY;
         const directionDown = delta > scrollThreshold;
 
         groups.forEach(group => checkElement(group, directionDown));
 
+        lastScrollY = currentY;
+        isInitialLoad = false;
+
+    }
+
+    function headerScroll() {
         const scrolled = window.scrollY > 50;
 
         wrapper.style.position = scrolled ? 'fixed' : 'absolute';
         header.style.backgroundColor = scrolled ? 'white' : '#f8f9fa';
         header.style.boxShadow = scrolled ? '4px 0 20px -5px rgba(0, 0, 0, 0.1)' : 'none';
-        lastScrollY = currentY;
-        isInitialLoad = false;
     }
-
 
     groups.forEach(group => checkElement(group, false));
 
@@ -72,11 +77,13 @@ export default function animate() {
             scrolling = true;
 
             requestAnimationFrame(() => {
-                handleScroll();
+                headerScroll()
+                animationOnScroll();
                 scrolling = false;
             });
         }
     });
 
     lastScrollY = window.scrollY || 0;
+
 }

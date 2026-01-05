@@ -21,7 +21,7 @@
         display: flex;
         margin-top: 48px;
         flex-wrap: wrap;
-        overflow: hidden;
+
 
 
         &-service {
@@ -113,6 +113,7 @@
 
         &__grid {
             flex-direction: column;
+            overflow: hidden;
 
             &-title {
                 text-align: left;
@@ -165,14 +166,12 @@
 @media screen and (max-width: 768px) {
     .welcome {
         &__grid {
-            overflow-x: hidden;
 
             &-service {
 
                 padding: 0 10px;
                 margin: 20px 0;
             }
-
 
         }
     }
