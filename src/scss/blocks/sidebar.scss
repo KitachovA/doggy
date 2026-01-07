@@ -40,6 +40,8 @@
         li {
             display: block;
             width: 100%;
+            position: relative;
+            z-index: 1000;
         }
 
     }
@@ -76,7 +78,7 @@
 
         &.active {
             opacity: 1;
-            transition: all 0.4s ease-out;
+            transition: all 0.4s ease;
         }
 
         .sidebar__link {

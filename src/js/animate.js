@@ -9,7 +9,15 @@ export default function animate() {
         faqPaw = document.querySelectorAll('.faq__fade'),
         faqContainer = document.querySelectorAll(".faq__container"),
         wrapper = document.querySelector('.sticky-wrapper'),
-        header = document.querySelector('.header');
+        header = document.querySelector('.header'),
+        galleryPaw = document.querySelectorAll(".gallery__paw"),
+        galleryTitle = document.querySelectorAll(".gallery__title"),
+        galleryContainer = document.querySelectorAll(".gallery__container "),
+        blogPaw = document.querySelectorAll('.blog__paw'),
+        blogWrapper = document.querySelectorAll(".blog__wrapper"),
+        blogTitle = document.querySelectorAll(".blog__title"),
+        blogSubtitle = document.querySelectorAll(".blog__subtitle");
+
 
     const groups = [
         welcomeElements,
@@ -20,7 +28,14 @@ export default function animate() {
         pricingFade,
         pricingBox,
         faqPaw,
-        faqContainer
+        faqContainer,
+        galleryPaw,
+        galleryTitle,
+        galleryContainer,
+        blogPaw,
+        blogWrapper,
+        blogTitle,
+        blogSubtitle
     ];
 
     let scrolling = false;

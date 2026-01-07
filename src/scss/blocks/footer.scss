@@ -1,0 +1,191 @@
+.footer {
+    padding: 128px 0 144px 0;
+    background-color: #333;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+
+        // gap: 60px;
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+    }
+
+
+    &__item {
+        &-title {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: #fff;
+        }
+
+        &-text {
+            margin-top: 25px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 170%;
+            color: #737373;
+        }
+
+        &-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        &-link {
+            a {
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 170%;
+                color: #999
+            }
+
+            a:hover {
+                color: white;
+            }
+        }
+
+        &-link:nth-child(1) {
+            margin-top: 25px;
+        }
+
+        &-links li+li {
+            margin-top: 10px;
+        }
+
+        &-social {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+            justify-content: flex-start;
+            gap: 30px;
+
+            &-link {
+                a {
+                    text-decoration: none;
+                    color: #999;
+                }
+
+                a::after {
+                    content: '';
+                    font-family: "Font Awesome 6 Brands";
+                    font-weight: 900;
+                    font-size: 16px;
+                }
+
+                .facebook::after {
+                    content: '\f39e';
+                }
+
+                .twitter::after {
+                    content: '\f099';
+                }
+
+                .instagram::after {
+                    content: '\f16d';
+                }
+
+                .linkedin::after {
+                    content: '\f0e1'
+                }
+            }
+
+            a:hover::after {
+
+                color: white;
+            }
+
+        }
+
+        &-form {
+            margin-top: 25px;
+            display: flex;
+
+            input {
+                padding: 6px 12px;
+                border: 1px solid rgb(108, 117, 125);
+                background: transparent;
+                color: #fff;
+                border-radius: 5px 0 0 5px;
+                height: 43px;
+            }
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                background: #fff;
+                color: #000;
+                border-radius: 0 4px 4px 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__item:nth-child(1) {
+        width: 50%;
+    }
+
+    &__item:nth-child(2) {
+        width: 15%;
+    }
+
+    &__item:nth-child(3) {
+        width: 35%;
+    }
+
+    .divider {
+        margin-top: 95px;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__rights {
+        display: block;
+        margin-top: 54px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 170%;
+        text-align: center;
+        color: #737373;
+    }
+
+    &__status {
+        color: #fff;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer {
+        &__wrapper {
+            flex-direction: column;
+
+            &-inner {
+                flex-direction: column;
+            }
+        }
+
+        &__form {
+            margin-top: 25px;
+        }
+
+        &__item:nth-child(1) {
+            width: 100%;
+        }
+    }
+
+
+
+
+}

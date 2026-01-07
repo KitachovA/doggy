@@ -6,7 +6,12 @@ import videoplayer from './js/videoplayer'
 import collapse from './js/collapse'
 import slider from './js/slider'
 import gallerySlider from './js/gallerySlider'
-// import gallery from './js/gallery'
+import forms from './js/forms'
+import modal from './js/modal'
+
+export const modalState = {
+    canClose: false
+};
 
 window.addEventListener('DOMContentLoaded', () => {
     animate()
@@ -15,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     collapse()
     slider()
     gallerySlider()
-    // gallery()
+    forms()
+    modal()
 })
 
