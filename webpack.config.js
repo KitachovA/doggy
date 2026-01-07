@@ -16,12 +16,17 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
+                    test: /\.html$/i,
+                    loader: 'html-loader',
+                },
+                {
                     test: /\.scss$/,
                     use: [
                         isDev ? "style-loader" : MiniCssExtractPlugin.loader,
                         "css-loader",
                         "postcss-loader",
                         "sass-loader",
+
                     ],
                 },
                 {
